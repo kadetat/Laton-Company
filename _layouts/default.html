@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+{% seo %}
+    <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+    {% include head-custom.html %}
+  </head>
+  <body>
+    <div class="wrapper">
+<!--       <header>
+        <h1><a href="{{ "/" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></h1>
+
+        {% if site.logo %}
+          <img src="{{site.logo | relative_url}}" alt="Logo" />
+        {% endif %}
+
+        <p>{{ site.description | default: site.github.project_tagline }}</p>
+
+        {% if site.github.is_project_page %}
+        <p class="view"><a href="{{ site.github.repository_url }}">View the Project on GitHub <small>{{ site.github.repository_nwo }}</small></a></p>
+        {% endif %}
+
+        {% if site.github.is_user_page %}
+        <p class="view"><a href="{{ site.github.owner_url }}">View My GitHub Profile</a></p>
+        {% endif %}
+
+        {% if site.show_downloads %}
+        <ul class="downloads">
+          <li><a href="{{ site.github.zip_url }}">Download <strong>ZIP File</strong></a></li>
+          <li><a href="{{ site.github.tar_url }}">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="{{ site.github.repository_url }}">View On <strong>GitHub</strong></a></li>
+        </ul>
+        {% endif %}
+      </header> -->
+
+      <div id="amazon-root"></div>
+<script type="text/javascript">
+
+    window.onAmazonLoginReady = function() {
+        amazon.Login.setClientId('amzn1.application-oa2-client.502697efea7f490fb123f130c00bd2cf');
+    };
+    (function(d) {
+        var a = d.createElement('script'); a.type = 'text/javascript';
+        a.async = true; a.id = 'amazon-login-sdk';
+        a.src = 'https://assets.loginwithamazon.com/sdk/na/login1.js';
+        d.getElementById('amazon-root').appendChild(a);
+    })(document);
+
+</script>
+
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarSupportedContent">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Crossword Creators</a>
+    </div>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="crossword_browse.html">Play</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="crossword_landing.html">Build</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="how_to.html">How To</a>
+            </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <div id="g_id_onload"
+                 data-client_id="161771154815-4t5i72diha2hkfl0nb2pjgv547e276hc.apps.googleusercontent.com"
+                 data-callback="handleCredentialResponse"
+                 data-auto_prompt="false">
+            </div>
+            <div class="g_id_signin"
+                 id="googleButton"
+                 data-type="standard"
+                 data-size="medium"
+                 data-theme="outline"
+                 data-text="sign_in_with"
+                 data-shape="rectangular"
+                 data-logo_alignment="left">
+            </div>
+            <div id="buttonDiv" style="display: inline-block; margin-right: 4px;"></div>
+            <a id="LoginWithAmazon" onClick={loginWithAmazon} style="cursor:pointer; display: inline-block;">
+                <img border="0" alt="Login with Amazon"
+                     src="https://images-na.ssl-images-amazon.com/images/G/01/lwa/btnLWA_gold_156x32.png"
+                     width="156" height="32" />
+            </a>
+            <div id="profileSection" style="display: inline-block">
+                <li class="nav-item" style="display: inline-block;">
+                <a class="nav-link" id="profileNameRibbon" style="color: white;" href="profile.html"></a>
+                </li>
+                <button id="Logout" type="button" class="btn btn-light">Logout</button>
+            </div>
+        </ul>
+    </div>
+</nav>
+<script>
+    function handleCredentialResponse(response) {
+        let dataToServer = {code    : response.credential};
+        let url = "api/googleHelp";
+        $.ajax({
+            type: 'POST',
+            url: url,
+            data: JSON.stringify(dataToServer),
+            success: function(dataFromServer) {
+                $('#LoginWithAmazon').hide();
+                $('#googleButton').hide();
+                $('#profileSection').show();
+                let result = JSON.parse(dataFromServer)
+                if ('added' in result) {
+                    document.getElementById("modalEmail").innerHTML = " " + result.email;
+                    document.getElementById("profileNameRibbon").innerHTML = result.name;
+                    $('#myLetEmailModal').modal('show');
+                } else {
+                    document.getElementById("profileNameRibbon").innerHTML = result.name;
+                    window.location.href = 'https://crosswordcreators.com'
+                }
+            },
+            contentType: "application/json",
+            dataType: 'text', // Could be JSON or whatever too
+        });
+    }
+</script>
+<script type="text/javascript">
+    document.getElementById('LoginWithAmazon').onclick = function() {
+        options = {scope: 'profile', response_type: 'code', state: 'abcdefghijklmnop', popup: 'False', redirect_uri: 'https://crosswordcreators.com'}
+        amazon.Login.authorize(options, function(response) {
+            if ( response.error ) {
+                alert('oauth error ' + response.error);
+                return;
+            }
+            let dataToServer = {code    : response.code};
+            let url = "api/amazonHelp";
+            $.ajax({
+                type: 'POST',
+                url: url,
+                data: JSON.stringify(dataToServer),
+                success: function(dataFromServer) {
+                    $('#LoginWithAmazon').hide();
+                    $('#googleButton').hide();
+                    $('#profileSection').show();
+                    let result = JSON.parse(dataFromServer)
+                    if ('added' in result) {
+                        document.getElementById("modalEmail").innerHTML = " " + result.email;
+                        document.getElementById("profileNameRibbon").innerHTML = result.name;
+                        $('#myLetEmailModal').modal('show');
+                    } else {
+                        document.getElementById("profileNameRibbon").innerHTML = result.name;
+                        window.location.href = 'https://crosswordcreators.com'
+                    }
+                },
+                contentType: "application/json",
+                dataType: 'text', // Could be JSON or whatever too
+            });
+    })};
+</script>
+<script type="text/javascript">
+    document.getElementById('Logout').onclick = function() {
+        amazon.Login.logout();
+        var url = "api/invalidate_session_servlet";
+
+        $.post(url, null, function (dataFromServer) {
+            setSessionJava();
+            $('#profileSection').hide();
+            document.getElementById("profileNameRibbon").innerHTML = "";
+            $('#LoginWithAmazon').show();
+            $('#googleButton').show();
+            window.location.href = 'https://crosswordcreators.com'
+        });
+    };
+</script>
+      <section>
+
+      {{ content }}
+
+      </section>
+      <footer>
+        {% if site.github.is_project_page %}
+        <p>This project is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
+        {% endif %}
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
+  </body>
+</html>
