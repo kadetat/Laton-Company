@@ -1,0 +1,121 @@
+body {
+    background-color: #A3B2BF;
+
+}
+
+/*header {*/
+/*    background-color: #77828C;*/
+/*    background-image: url("../images/aboutheader.png");*/
+/*    background-position: right;*/
+/*    background-repeat: no-repeat;*/
+/*    background-size: 200px, 100px;*/
+/*    color: #89BAD9;*/
+/*    font-family: Georgia, Palatino, serif;*/
+/*    font-size: 30px;*/
+/*    height: 120px;*/
+/*    padding: 8px;*/
+
+
+
+/*}*/
+
+section {
+    background-color: #F0F1F2;
+    margin-left: 4%;
+    margin-right: 4%;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 0px;
+
+
+}
+
+article {
+    border: 2px solid black;
+    padding: 5px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 10px;
+
+
+}
+
+.top{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    padding: 30px;
+    text-align: center;
+    margin-top: 0px;
+}
+
+.footer {
+    border: 2px solid black;
+    background-color: white;
+
+}
+
+.svgelem {
+    margin-left:auto;
+    margin-right:auto;
+    display:block;
+}
+
+.OutlineText {
+    font-size: 64px;
+    color: black;
+    text-shadow:
+        /* Outline */
+            -1px -1px 0 aquamarine,
+            1px -1px 0 #000000,
+            -1px 1px 0 #000000,
+            1px 1px 0 #000000,
+            -2px 0 0 #000000,
+            2px 0 0 #000000,
+            0 2px 0 #000000,
+            0 -2px 0 #000000; /* Terminate with a semi-colon */
+}
+
+@media (max-width: 800px) {
+    section {
+        /*background-color: green;*/
+        display: inline-block;
+        width: 100%;
+        padding-left: 2%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    article {
+        display: inline-block;
+        width: 100%;
+        padding-left: 0;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .pain {
+        margin-top: 25px;
+    }
+    p {
+        width: 100%;
+        font-size: 20px;
+        font-family: arial,sans-serif;
+    }
+    h2{
+        font-size: 26px;
+        font-family: arial,sans-serif;
+    }
+}
+
+p {
+    font-size: 150%;
+    font-family: arial,sans-serif;
+}
+
+h2{
+    font-size: 200%;
+    font-family: arial,sans-serif;
+}
+h1{
+    font-size: 250%;
+}
