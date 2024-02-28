@@ -1,5 +1,5 @@
 ---
-layout: default
+title: Test Website Index Page
 ---
 
 Hello, this is Kade.
