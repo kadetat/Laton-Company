@@ -3,20 +3,6 @@ body {
 
 }
 
-/*header {*/
-/*    background-color: #77828C;*/
-/*    background-image: url("../images/aboutheader.png");*/
-/*    background-position: right;*/
-/*    background-repeat: no-repeat;*/
-/*    background-size: 200px, 100px;*/
-/*    color: #89BAD9;*/
-/*    font-family: Georgia, Palatino, serif;*/
-/*    font-size: 30px;*/
-/*    height: 120px;*/
-/*    padding: 8px;*/
-
-
-
 /*}*/
 
 section {
@@ -74,6 +60,13 @@ article {
             2px 0 0 #000000,
             0 2px 0 #000000,
             0 -2px 0 #000000; /* Terminate with a semi-colon */
+}
+
+@media screen and (min-width: 600px) {
+    .navbar-toggle {
+        display: none; /* Hide the navigation links by default */
+        text-align: left;
+    }
 }
 
 @media (max-width: 800px) {
