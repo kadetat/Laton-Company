@@ -1,5 +1,4 @@
 ---
-title: Laton Company - My Blog
 list_title: Latest Posts
 ---
 
