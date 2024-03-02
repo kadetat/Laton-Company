@@ -7,6 +7,8 @@ body {
 
 section {
     background-color: #F0F1F2;
+    padding-left: 15px;
+    padding-right: 15px;
     margin-left: 4%;
     margin-right: 4%;
     padding-bottom: 0px;
@@ -14,10 +16,6 @@ section {
 
 }
 
-padding {
-    padding-left: 15px;
-    padding-right: 15px;
-}
 
 article {
     border: 2px solid black;
