@@ -7,7 +7,7 @@ list_title: Latest Posts
   <h1 class="OutlineTest"> Welcome to Laton Company - My Blog </h1>
   <h2>Rural Revitalizer, Innovator, Creator</h2>
 
-  <div class="row">
+  <div class="row" style="padding-left:10%; padding-right:10%;">
   <div class="col-sm-3">
     <img src="https://kadetat.github.io/Laton-Company/images/profilepic.PNG" alt="Profile Pic" width="125" height="125" style="float:right">
   </div>
