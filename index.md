@@ -16,4 +16,3 @@ list_title: Latest Posts
   </div>
 </article>
 
-<article class= "postList">
