@@ -4,7 +4,7 @@ list_title: Latest Posts
 
 <article class= "top">
   <div class="wrapper">
-    <div class="box box2">
+    <div class="box box1">
       <img src="https://kadetat.github.io/Laton-Company/images/latonlogo.PNG" alt="Profile Pic">
     </div>
   </div>
