@@ -9,11 +9,14 @@ section {
     background-color: #F0F1F2;
     margin-left: 4%;
     margin-right: 4%;
-    padding-left: 15px;
-    padding-right: 15px;
     padding-bottom: 0px;
 
 
+}
+
+padding {
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 article {
