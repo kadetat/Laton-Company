@@ -3,6 +3,11 @@ list_title: Latest Posts
 ---
 
 <article class= "top">
+  <div class="wrapper">
+    <div class="box box2">
+      <img src="https://kadetat.github.io/Laton-Company/images/profilepic.PNG" alt="Profile Pic">
+    </div>
+  </div>
   <h1 class="OutlineText"> Welcome to Laton Company - My Blog </h1>
   <h2>Rural Revitalizer, Innovator, Creator</h2>
 
