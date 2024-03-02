@@ -9,10 +9,14 @@ list_title: Latest Posts
 
   <div class="row">
   <div class="col-sm-3">
-    <img src="https://kadetat.github.io/Laton-Company/images/profilepic.PNG" alt="Profile Pic" width="100" height="100" style="float:right">
+    <img src="https://kadetat.github.io/Laton-Company/images/profilepic.PNG" alt="Profile Pic" width="125" height="125" style="float:right">
   </div>
-  <div class="col-md-9">
-    <p> description </p>
+  <div class="col-md-9" style="text-align:left>
+    <p> ************************description*************************** </p>
+    <p> ************************description*************************** </p>
+    <p> ************************description*************************** </p>
+    <p> ************************description*************************** </p>
+    <p> ************************description*************************** </p>
   </div>
   </div>
 </article>
