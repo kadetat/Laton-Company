@@ -12,6 +12,8 @@ list_title: Latest Posts
       </div>
       <div class="col-md-9" style="text-align:left;">
         <p> ************************description*************************** </p>
+        <p> ************************description*************************** </p>
+        <p> ************************description*************************** </p>
       </div>
   </div>
 </article>
