@@ -43,6 +43,15 @@ article {
     margin-top: 10px;
 }
 
+.postList{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    padding: 30px;
+    text-align: left;
+    margin-top: 10px;
+}
+
 .footer {
     border: 2px solid black;
     background-color: white;
