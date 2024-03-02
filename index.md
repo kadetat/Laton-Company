@@ -9,7 +9,7 @@ list_title: Latest Posts
 
   <div class="row">
   <div class="col-sm-3">
-    ![alt text](https://kadetat.github.io/Laton-Company/images/profilepic.png "Profile Pic: Janae Talbott")
+    <img src="https://kadetat.github.io/Laton-Company/images/profilepic.png" alt="Profile Pic" width="42" height="42" style="float:right">
   </div>
   <div class="col-md-9">
     <p> description </p>
