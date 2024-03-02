@@ -1,5 +1,6 @@
 ---
 title: Laton Company - My Blog
+list_title: Latest Posts
 ---
 
 <article class= "top">
@@ -8,7 +9,7 @@ title: Laton Company - My Blog
 
   <div class="row">
   <div class="col-sm-3">
-    <p>img</p>
+    ![alt text](https://kadetat.github.io/Laton-Company/images/profilepic.png "Profile Pic: Janae Talbott")
   </div>
   <div class="col-md-9">
     <p> description </p>
@@ -16,7 +17,4 @@ title: Laton Company - My Blog
   </div>
 </article>
 
-<article>
-  Latest:
-</article>
 
