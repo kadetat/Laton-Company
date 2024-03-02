@@ -7,10 +7,10 @@ title: Laton Company - My Blog
   <h2>Rural Revitalizer, Innovator, Creator</h2>
 
   <div class="row">
-  <div class="col-sm-3", style="border: right;">
+  <div class="col-sm-3">
     <p>img</p>
   </div>
-  <div class="col-md-9", style="border: none;">
+  <div class="col-md-9">
     <p> description </p>
   </div>
   </div>
