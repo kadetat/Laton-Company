@@ -1,6 +1,6 @@
 ---
 list_title: Latest Posts
-permalink: /about
+permalink: /About.html
 ---
 
 <article class= "top">
