@@ -2,6 +2,7 @@ theme: minima
 title: Laton Company
 Author: Janae Talbott
 description: This is a blog website for Laton Company....
+show_excerpts: true
 social_links:
     - { platform: instagram,  user_url: "https://www.instagram.com/latoncompany/" }
     - { platform: linkedin, user_url: "https://www.linkedin.com/in/janae-talbott-561024b/" }
